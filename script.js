@@ -120,3 +120,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  emailjs.init("iMRl4KMQ0gkmONe0M"); 
+  document.getElementById("contactform").addEventListener("submit", function (event) {
+      event.preventDefault();
+      let userEmail = document.getElementById("email").value.trim();
+      let formData = {
+        to_name: document.getElementById("name").value,
+        to_email: userEmail,
+        from_email: "rahulkewat9768@gmail.com",
+        mobile: document.getElementById("mobile").value,
+        message: document.getElementById("message").value
+    };
+      console.log("Form Data:", formData);
+      emailjs.send("service_21q17hp", "template_9twaumc", formData)
+      .then(response => {
+          alert("Message sent successfully!");
+          console.log("EmailJS Response:", response);
+          document.getElementById("contactform").reset();
+      })
+      .catch(error => {
+          alert("Failed to send message. Check the console for details.");
+          console.error("EmailJS Error:", error);
+      });
+  });
+});

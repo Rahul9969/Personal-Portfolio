@@ -146,3 +146,35 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+
+function openProjectModal(title, image, description, languages, url) {
+  document.getElementById('modal-title').innerText = title;
+  document.getElementById('modal-image').src = image;
+  document.getElementById('modal-description').innerText = description;
+  document.getElementById('launch-button').setAttribute('onclick', `window.open('${url}', '_blank')`);
+
+  
+  let languagesArray = languages.split(',');
+  let languagesContainer = document.getElementById('modal-languages');
+  languagesContainer.innerHTML = ''; 
+  languagesArray.forEach(lang => {
+    let span = document.createElement('span');
+    span.classList.add('language-badge');
+    span.innerText = lang.trim();
+    languagesContainer.appendChild(span);
+  });
+
+  document.getElementById('project-modal').style.display = 'block';
+}
+
+function closeProjectModal() {
+  document.getElementById('project-modal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+  let modal = document.getElementById('project-modal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+}

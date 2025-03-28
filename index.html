@@ -462,7 +462,7 @@
           
         <ul class="project-list">
           <li class="project-item  active" data-filter-item data-category="web development">
-            <a href="https://rahul9969.github.io/Wikipedia-Clone/">
+            <a  onclick="openProjectModal('Wikipedia Clone', 'images/wikipedia.jpg', 'Wikipedia Clone is a simple web app that fetches Wikipedia search results based on user input. Ist uses the Wikipedia API to display relevant article links dynamically. A great project for learning API integration and real-time search functionality. Fast, lightweight, and easy to use!', 'HTML, CSS, JavaScript', 'https://rahul9969.github.io/Wikipedia-Clone/')" >
               <figure class="project-img">
                 <div class="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
@@ -475,7 +475,7 @@
           </li>
 
           <li class="project-item  active" data-filter-item data-category="web development">
-            <a href="https://rahul9969.github.io/Word-Counter/">
+            <a  onclick="openProjectModal('Word Counter', 'images/Word counter.jpg', 'Word Counter is a simple web app that counts words, letters, and characters from user input in real time. It provides instant feedback for writers, students, and editors. A great tool for improving writing efficiency and learning string manipulation in JavaScript!', 'HTML, CSS, JavaScript', 'https://rahul9969.github.io/Word-Counter/')">
               <figure class="project-img">
                 <div class="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
@@ -488,7 +488,7 @@
           </li>
 
           <li class="project-item  active" data-filter-item data-category="game development">
-            <a href="https://rahul9969.github.io/Emoji-catcher-game/">
+            <a  onclick="openProjectModal('Emoji Catcher Game', 'images/emoji catcher game.jpg', 'Emoji Catcher Game is a fun and interactive game where players have to click on the emojis to score points. It features smooth animations, increasing difficulty, and real-time score tracking. Perfect for beginners learning game development, event handling, and dynamic element manipulation in JavaScript! 🎮', 'HTML, CSS, JavaScript', 'https://rahul9969.github.io/Emoji-catcher-game/')">
               <figure class="project-img">
                 <div class="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
@@ -501,7 +501,7 @@
           </li>
 
           <li class="project-item  active" data-filter-item data-category="game development">
-            <a href="https://rahul9969.github.io/Shape-Clicker-Game/">
+            <a onclick="openProjectModal('Shape Clicker Game', 'images/shape catcher.jpg', 'Shape Clicker Game is a simple yet engaging game where players click on moving shapes and check your reflex action timing. It features dynamic shape spawning and time tracking. Perfect for beginners learning event handling and game logic in JavaScript. Play and improve your reflexes', 'HTML, CSS, JavaScript', 'https://rahul9969.github.io/Shape-Clicker-Game/')">
               <figure class="project-img">
                 <div class="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
@@ -512,38 +512,39 @@
               <p class="project-category">Game development</p>
             </a>
           </li>
-          
+
+         
+
         </ul>
+
       </section>
+
     </article>
 
-  
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeProjectModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="Project Image" class="modal-img">
+        <p id="modal-description"></p>
+        <p><strong>Languages Used:</strong></p>
+        <div id="modal-languages" class="modal-languages-container"></div>
+        <button id="launch-button" class="launch-btn" onclick="launchProject()">🚀 Launch Project</button>
+      </div>
+    </div>
+
+
+
+
 
       <article class="blog" data-page="blog">
+
         <header>
           <h2 class="h2 article-title">Blog</h2>
         </header>
          <section class="blog-posts">
-          <ul class="blog-posts-list">
 
-            <li class="blog-post-item">
-              <a href="#">
-                <figure class="blog-banner-box">
-                  <img src="images\blog1.png" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-                <div class="blog-content">
-                  <div class="blog-meta">
-                    <p class="blog-category">Self-Improvement & Mindfulness</p>
-                    <span class="dot"></span>
-                    <time datetime="2025-03-22">Mar 22, 2025</time>
-                  </div>
-                  <h3 class="h3 blog-item-title">The forgotten art of time and spacing</h3>
-                  <p class="blog-text">
-                    In a world that celebrates hustle, noise, and filling every moment with productivity, we often forget one of the simplest yet most powerful elements of life: spacing........
-                  </p>
-                </div>
-              </a>
-            </li>
+          <ul class="blog-posts-list">
 
             <li class="blog-post-item">
               <a href="https://medium.com/@kewatrahul8928/navigating-the-first-semester-of-computer-engineering-expectations-vs-reality-2c55329e1e66">
@@ -576,11 +577,13 @@
         <section class="contact-form">
           <h3 class="h3 form-title">Contact Form</h3>
           <form  id="contactform" class="form" data-form>
+
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" id="name" placeholder="Full name" required data-form-input>
               <input type="email" name="email" class="form-input" id="email" placeholder="Email address" required data-form-input>
               <input type="text" name="Mobile No." class="form-input" id="mobile" placeholder="Mobile Number" required data-form-input>
             </div>
+
             <textarea name="message" class="form-input" id="message" placeholder="Your Message" required data-form-input></textarea>
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
@@ -592,8 +595,10 @@
 
     </div>
 
+    
   </main>
 
+  
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

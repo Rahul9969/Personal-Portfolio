@@ -674,7 +674,7 @@ main {
   margin: auto;
 }
 
-.closes {
+.close {
   position: absolute;
   top: 15px;
   right: 30px;
@@ -685,7 +685,7 @@ main {
   transition: 0.3s;
 }
 
-.closes:hover {
+.close:hover {
   color: red;
    transform: rotate(90deg);
 }
@@ -1019,21 +1019,6 @@ main {
   background: linear-gradient(135deg, #0072ff, #00c6ff);
   transform: scale(1.08);
 }
-
-
-.close {
-  color: white;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.close:hover {
-  color: red;
-  transform: rotate(90deg);
-}
-
 
 .blog-posts { margin-bottom: 10px; }
 

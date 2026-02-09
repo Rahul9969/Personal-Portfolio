@@ -1,6 +1,5 @@
 'use strict';
 
-
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 const sidebar = document.querySelector("[data-sidebar]");
